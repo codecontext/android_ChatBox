@@ -6,23 +6,24 @@
     android:layout_height="match_parent"
     android:background="#F9F9F9"
     android:backgroundTint="#FFFFFF"
-    tools:context=".OTPActivity">
+    tools:context=".SetupProfileActivity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/avatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/otp_verify" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/phoneLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:text="Profile Info"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Enter the OTP sent to this number"
+        android:text="Please set your name and an optional profile image"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/phoneLevel"
         app:layout_constraintStart_toStartOf="@+id/phoneLevel"
@@ -59,27 +60,25 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <com.mukesh.OtpView
-                android:id="@+id/otp_view"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/nameBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:inputType="number"
-                android:itemBackground="@color/light_yellow"
-                android:textColor="@android:color/black"
-                app:OtpItemCount="6"
-                app:OtpLineColor="@color/green"
-                app:OtpViewType="line" />
+                android:background="@drawable/textbox_outline"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Enter your name"
+                android:padding="10dp"
+                android:phoneNumber="true" />
 
             <Button
-                android:id="@+id/continueButton"
+                android:id="@+id/setupButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="#4CAF50"
-                android:text="Continue" />
+                android:text="Setup Profile" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
