@@ -12,14 +12,14 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mobile_auth" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/phoneLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -39,9 +39,9 @@
         android:gravity="center"
         android:text="ChatBox will send OTP SMS to your mobile to verify your number"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/phoneLevel"
+        app:layout_constraintStart_toStartOf="@+id/phoneLevel"
+        app:layout_constraintTop_toBottomOf="@+id/phoneLevel" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -66,10 +66,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/textbox_outline"
                 android:ems="10"
+                android:gravity="center"
                 android:hint="Enter your mobile number"
-                android:inputType="textPersonName"
                 android:padding="10dp"
-                android:gravity="center"/>
+                android:phoneNumber="true" />
 
             <Button
                 android:id="@+id/continueButton"
