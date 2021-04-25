@@ -68,11 +68,10 @@
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Enter your name"
-                android:padding="10dp"
-                android:phoneNumber="true" />
+                android:padding="10dp" />
 
             <Button
-                android:id="@+id/setupButton"
+                android:id="@+id/continueSetupButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
