@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.kd.chatbox.databinding.RowConversationBinding;
 
 import java.util.ArrayList;
@@ -35,6 +36,11 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UsersViewHol
         User user = users.get(position);
 
         holder.binding.userName.setText(user.getName());
+
+        Glide.with(context).load(user.getProfileImage())
+                .placeholder(R.drawable.avatar)
+                .into(holder.binding.profileImage);
+
     }
 
     @Override
