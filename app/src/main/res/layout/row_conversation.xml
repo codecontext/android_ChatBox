@@ -4,24 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:layout_margin="8dp"
+    android:background="?selectableItemBackground">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/avatar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/avatar"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/userName"
-        android:layout_width="wrap_content"
+        android:layout_width="262dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:singleLine="true"
         android:text="Sample Name"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/profileImage"
         app:layout_constraintTop_toTopOf="@+id/profileImage" />
@@ -30,8 +32,10 @@
         android:id="@+id/lastMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
         android:text="Tap to chat"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/userName"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
 
@@ -39,7 +43,6 @@
         android:id="@+id/msgTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="06:00 PM"
         android:textSize="12sp"
@@ -50,8 +53,8 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="#E4E4E4"
+        android:layout_marginTop="12dp"
+        android:background="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImage" />
