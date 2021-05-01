@@ -12,5 +12,6 @@
     <color name="greenDark">#156818</color>
     <color name="yellow_banana">#FFFCF4A3</color>
     <color name="green_mint">#FF98FF98</color>
-    <color name="grey">#FFECECEC</color>
+    <color name="grey_light">#FFECECEC</color>
+    <color name="grey_medium">#FFC1C1C1</color>
 </resources>

@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         binding.statusList.setAdapter(statusAdapter);
         binding.recylerView.setAdapter(usersAdapter);
 
+        binding.recylerView.showShimmerAdapter();
+        binding.statusList.showShimmerAdapter();
+
         database.getReference().child("users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         users.add(user);
                     }
                 }
-
+                binding.recylerView.hideShimmerAdapter();
                 usersAdapter.notifyDataSetChanged();
             }
 
@@ -132,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         status.setStatuses(statuses);
                         userStatuses.add(status);
                     }
+                    binding.statusList.hideShimmerAdapter();
                     statusAdapter.notifyDataSetChanged();
                 }
             }
